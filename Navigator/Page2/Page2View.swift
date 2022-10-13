@@ -63,12 +63,14 @@ struct Page2View: View {
         HStack {
             Spacer()
             Text("\(text)")
-                .font(.system(size: 50).bold())
+                .font(.system(size: 44).bold())
                 .foregroundColor(.white)
+                .padding(.vertical, 8)
             
             Spacer()
         }
         .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.black))
+        .padding(.horizontal, 24)
     }
     
     func cell(_ model: Page2Model) -> some View {
@@ -76,12 +78,13 @@ struct Page2View: View {
             Spacer()
             
             Text("Row: \(model.id)")
-                .font(.system(size: 50).bold())
-                .foregroundColor(.blue)
+                .font(.system(size: 44).bold())
+                .foregroundColor(.white)
+                .padding(.vertical, 8)
             
             Spacer()
         }
-        .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.orange))
+        .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.blue))
     }
     
 }

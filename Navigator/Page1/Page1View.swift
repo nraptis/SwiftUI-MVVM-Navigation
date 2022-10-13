@@ -54,11 +54,12 @@ struct Page1View: View {
             Spacer()
             
             Text("Row: \(model.id)")
-                .font(.system(size: 50).bold())
-                .foregroundColor(.blue)
+                .font(.system(size: 44).bold())
+                .foregroundColor(.white)
+                .padding(.vertical, 8)
             
             Spacer()
         }
-        .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.orange))
+        .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.black))
     }
 }

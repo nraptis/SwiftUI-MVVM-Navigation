@@ -29,12 +29,14 @@ struct Page3View: View {
         HStack {
             Spacer()
             Text("\(text)")
-                .font(.system(size: 50).bold())
+                .font(.system(size: 44).bold())
+                .padding(.vertical, 8)
                 .foregroundColor(.white)
             
             Spacer()
         }
         .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.black))
+        .padding(.horizontal, 24)
     }
     
 }
