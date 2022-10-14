@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6B971528F9C45D00ECD6A8 /* ReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B971428F9C45D00ECD6A8 /* ReusableViews.swift */; };
 		0D71807928F8C67600E55BC1 /* Page1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71806F28F8C67500E55BC1 /* Page1Model.swift */; };
 		0D71807A28F8C67600E55BC1 /* Page1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71807028F8C67500E55BC1 /* Page1ViewModel.swift */; };
 		0D71807B28F8C67600E55BC1 /* Page1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71807128F8C67500E55BC1 /* Page1View.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D6B971428F9C45D00ECD6A8 /* ReusableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViews.swift; sourceTree = "<group>"; };
 		0D71806F28F8C67500E55BC1 /* Page1Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Model.swift; sourceTree = "<group>"; };
 		0D71807028F8C67500E55BC1 /* Page1ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewModel.swift; sourceTree = "<group>"; };
 		0D71807128F8C67500E55BC1 /* Page1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1View.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		0D75DF1428F8B8080032B14A /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B971428F9C45D00ECD6A8 /* ReusableViews.swift */,
 				0D75DF1528F8B8080032B14A /* NavigatorApp.swift */,
 				0D75DF2628F8B84E0032B14A /* SectionContainerView.swift */,
 				0D75DF2828F8B8550032B14A /* SectionContainerViewModel.swift */,
@@ -197,6 +200,7 @@
 				0D71808028F8C67600E55BC1 /* Page3ViewModel.swift in Sources */,
 				0D71807C28F8C67600E55BC1 /* Page2View.swift in Sources */,
 				0D71807D28F8C67600E55BC1 /* Page2ViewModel.swift in Sources */,
+				0D6B971528F9C45D00ECD6A8 /* ReusableViews.swift in Sources */,
 				0D71807E28F8C67600E55BC1 /* Page2Model.swift in Sources */,
 				0D71807928F8C67600E55BC1 /* Page1Model.swift in Sources */,
 				0D71807F28F8C67600E55BC1 /* Page3View.swift in Sources */,

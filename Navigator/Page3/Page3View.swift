@@ -14,29 +14,13 @@ struct Page3View: View {
     
     var body: some View {
         VStack {
-            Button {
+            
+            ReusableViews.titleCell(withText: "Page 3", andSubtext: "From \(viewModel.page2Model.id)") {
                 viewModel.handleDismiss()
                 presentationMode.wrappedValue.dismiss()
-            } label: {
-                buttonContent("Back")
             }
             Spacer()
         }
         .toolbar(.hidden, for: .navigationBar)
     }
-    
-    func buttonContent(_ text: String) -> some View {
-        HStack {
-            Spacer()
-            Text("\(text)")
-                .font(.system(size: 44).bold())
-                .padding(.vertical, 8)
-                .foregroundColor(.white)
-            
-            Spacer()
-        }
-        .background(RoundedRectangle(cornerRadius: 12).fill().foregroundColor(.black))
-        .padding(.horizontal, 24)
-    }
-    
 }

@@ -13,6 +13,7 @@ class Page1ViewModel: ObservableObject {
     @Published var isLoading = false
     
     let sectionContainerViewModel: SectionContainerViewModel
+    
     init(sectionContainerViewModel: SectionContainerViewModel) {
         print("Page1ViewModel => init()")
         
@@ -25,7 +26,6 @@ class Page1ViewModel: ObservableObject {
     deinit {
         print("Page1ViewModel => deinit()")
     }
-    
     
     private var _page2ViewModel: Page2ViewModel?
     func page2ViewModelSpawn(_ model: Page1Model) {

@@ -15,6 +15,7 @@ class Page2ViewModel: ObservableObject {
     let page1Model: Page1Model
     let page1ViewModel: Page1ViewModel
     let sectionContainerViewModel: SectionContainerViewModel
+    
     init(sectionContainerViewModel: SectionContainerViewModel,
          page1ViewModel: Page1ViewModel,
          page1Model: Page1Model) {
