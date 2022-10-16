@@ -29,8 +29,8 @@ struct FirstPageView: View {
             ReusableViews.footerBar()
         }
         .overlay(ReusableViews.loadingOverlay(isLoading: viewModel.isLoading))
-        .navigationDestination(for: FirstPageModel.self) { model in
-            if let secondPageViewModel = viewModel.secondPageViewModel {
+        .navigationDestination(for: FirstPageModel.self) { [weak viewModel] model in
+            if let secondPageViewModel = viewModel?.secondPageViewModel {
                 SecondPageView(viewModel: secondPageViewModel)
             }
         }

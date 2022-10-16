@@ -14,6 +14,7 @@ struct SecondPageModel: Identifiable, Hashable {
 class SecondPageViewModel: ObservableObject {
     
     @Published var models = [SecondPageModel]()
+    @Published var isLoading = false
     
     let container: ContainerViewModel
     let parent: FirstPageViewModel
@@ -34,6 +35,23 @@ class SecondPageViewModel: ObservableObject {
     
     deinit {
         print("2nd page vm => destroyed()")
+    }
+    
+    func selectModelIntent(model: SecondPageModel) async {
+        await MainActor.run {
+            isLoading = true
+        }
+        
+        do {
+            try await Task.sleep(nanoseconds: 1_000_000_000)
+        } catch {
+            
+        }
+        
+        await MainActor.run {
+            isLoading = false
+            navigateToThirdPage(model: model)
+        }
     }
     
     private(set) var thirdPageViewModel: ThirdPageViewModel?

@@ -17,7 +17,9 @@ struct SecondPageView: View {
             ScrollView {
                 ForEach(viewModel.models) { model in
                     Button {
-                        viewModel.navigateToThirdPage(model: model)
+                        Task {
+                            await viewModel.selectModelIntent(model: model)
+                        }
                     } label: {
                         ReusableViews.nextCell(withText: "Item #\(model.id)", textColor: .yellow, backgrounColor: .black)
                     }
@@ -28,8 +30,9 @@ struct SecondPageView: View {
             ReusableViews.footerBar()
         }
         .toolbar(.hidden, for: .navigationBar)
-        .navigationDestination(for: SecondPageModel.self) { model in
-            if let thirdPageViewModel = viewModel.thirdPageViewModel {
+        .overlay(ReusableViews.loadingOverlay(isLoading: viewModel.isLoading))
+        .navigationDestination(for: SecondPageModel.self) { [weak viewModel] model in
+            if let thirdPageViewModel = viewModel?.thirdPageViewModel {
                 ThirdPageView(viewModel: thirdPageViewModel)
             }
         }
